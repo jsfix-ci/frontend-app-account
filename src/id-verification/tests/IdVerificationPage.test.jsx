@@ -42,6 +42,9 @@ describe('IdVerificationPage', () => {
   };
 
   it('decodes and stores course_id', async () => {
+    /* TODO: JSFIX could not patch the breaking change:
+    Removed relative pathname support in hash history and memory history 
+    Suggested fix: Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead. */
     history.push(`/?course_id=${encodeURIComponent('course-v1:edX+DemoX+Demo_Course')}`);
     await act(async () => render((
       <Router history={history}>
@@ -59,6 +62,9 @@ describe('IdVerificationPage', () => {
   });
 
   it('stores `next` value', async () => {
+    /* TODO: JSFIX could not patch the breaking change:
+    Removed relative pathname support in hash history and memory history 
+    Suggested fix: Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead. */
     history.push('/?next=dashboard');
     await act(async () => render((
       <Router history={history}>
